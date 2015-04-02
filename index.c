@@ -160,9 +160,6 @@ void indexDataFile(char *dataFile) {
 		filePosAfterFWrite = ftell(indexFile);
 		printf("Pos after IndexHeader write: %d\n", filePosAfterFWrite);
 
-        // DEBUG:
-		printf("\n%s\n", indexRecordsLastName->key.lastName);
-
 		// WRITE IndexRecord indexRecordsLastName to file
 		writeCount += fwrite(indexRecordsLastName, sizeof(IndexRecord), indexRecordCount, indexFile);
 
